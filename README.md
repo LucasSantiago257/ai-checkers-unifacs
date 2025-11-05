@@ -30,8 +30,8 @@ O que diferencia nosso jogo:
 
 **1. Clone este repositório**
 ```sh
-git clone https://github.com/usuario/repositorio.git
-cd repositorio
+https://github.com/LucasSantiago257/ai-checkers-unifacs.git
+cd ai-checkers-unifacs
 ```
 
 **2. Instale as Dependências**
