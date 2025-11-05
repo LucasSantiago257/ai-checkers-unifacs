@@ -43,6 +43,7 @@ pip install -r requirements.txt
 ```sh
 python main.py
 ```
+---
 
 🤖 Funcionamento da IA
 
@@ -55,6 +56,7 @@ Geração de todos os movimentos válidos.
 Simulação e avaliação de cada movimento até uma profundidade definida.
 Retorno da jogada mais vantajosa segundo a função de avaliação.
 ```
+---
 
 👥 Integrantes do grupo
 ```
