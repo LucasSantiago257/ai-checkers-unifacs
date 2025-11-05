@@ -13,8 +13,8 @@ O que diferencia nosso jogo:
 
 - 🎨 **Interface visual** atraente e responsiva com PyGame.
 - 🧠 **IA competitiva** usando MiniMax para decidir jogadas.
-- 🔄 Suporte a partidas **Jogador vs Jogador** e **Jogador vs Computador**.
-- ⚡ Código limpo e pronto para evoluir (novas features como heurísticas e profundidade variável).
+- 🔄 Suporte a partidas **Jogador vs Computador**, e boa sorte vencendo esse computador 🙂.
+- ⚡ Código limpo e pronto para evoluir.
 
 ---
 
@@ -54,4 +54,6 @@ Simulação e avaliação de cada movimento até uma profundidade definida.
 Retorno da jogada mais vantajosa segundo a função de avaliação.
 
 👥 Integrantes do grupo
-Lucas Santiago
+```
+Lucas Carvalho Santiago
+```
