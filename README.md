@@ -45,9 +45,9 @@ python main.py
 ```
 
 🤖 Funcionamento da IA
-```
-A Inteligência Artificial do jogo segue o algoritmo MiniMax para considerar todos os movimentos possíveis a partir da situação atual do tabuleiro e escolher aquele que maximiza suas chances de vitória e minimiza as do adversário.
-```
+
+> A Inteligência Artificial do jogo segue o algoritmo MiniMax para considerar todos os movimentos possíveis a partir da situação atual do tabuleiro e escolher aquele que maximiza suas chances de vitória e minimiza as do adversário.
+
 
 Etapas na tomada de decisão:
 ```
