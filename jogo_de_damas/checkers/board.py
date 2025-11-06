@@ -27,13 +27,6 @@ class Board:
             else:
                 self.darkblue_kings += 1
 
-    def get_row_and_column_from_mpos(self,pos):
-        x, y = pos
-        row = y // SQUARE_SIZE
-        col = x // SQUARE_SIZE
-        return row, col
-
-
     def create_board(self):
         for row in range(ROWS):
             self.board.append([])
