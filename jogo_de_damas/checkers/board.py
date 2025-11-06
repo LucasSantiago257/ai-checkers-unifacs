@@ -10,6 +10,9 @@ class Board:
         self.darkblue_kings = self.white_kings = 0
         self.create_board()
     
+    def get_piece(self, row, col):
+        return self.board[row][col]
+
     def draw_squares(self, win):
         win.fill(BLACK)
         for row in range(ROWS):
