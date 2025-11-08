@@ -25,6 +25,25 @@ O que diferencia nosso jogo:
 - **MiniMax** – algoritmo de busca para tomada de decisão da IA.
 
 ---
+## Objetivo
+
+Implementar um Jogo de Damas utilizando um agente inteligente para jogar contra o humano. O Agente Inteligente utilizará uma busca MiniMax para conseguir efetuar as melhores jogadas possíveis e impedir que o jogador ganhe terreno no tabuleiro.
+
+## Metodologia
+
+Estamos utilizando o Python como nossa linguagem principal e o PyGame como nossa Library Auxiliar para a criação do tabuleiro e interatividade do jogador com o mesmo. Além disso, estaremos implementando um Agente com Busca MiniMax, que descreveremos com mais detalhes logo abaixo...
+
+## Busca MiniMax?
+
+A Busca MiniMax é um algoritmo de decisão muito usado para jogos de dois jogadores, como o Jogo da Velha, o Xadrez e as Damas. É uma Árvore de Busca que explora múltiplas jogadas possíveis expandindo nós profundos, alguns deles chegando até o final do jogo. Após expandir os nós, esse algoritmo consegue determinar quais serão as jogadas que levarão o agente ao sucesso de melhor forma, enquanto impede o sucesso do adversário.
+
+## Resultado
+
+```
+Resultado ainda pendente de testes e término da lógica do jogo e agente.
+```
+
+---
 
 ## 🚀 Como executar o projeto
 
