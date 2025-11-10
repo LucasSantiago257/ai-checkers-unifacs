@@ -79,5 +79,9 @@ Retorno da jogada mais vantajosa segundo a função de avaliação.
 
 👥 Integrantes do grupo
 ```
-Lucas Carvalho Santiago
+LUCAS CARVALHO SANTIAGO
+GUILHERME ORNELLAS CARVALHO 
+JOÃO VICTOR MORAES LEITE
+JORGE HENRIQUE RAMOS GANDOLFI
+VICTOR OLIVEIRA CERQUEIRA
 ```
