@@ -12,13 +12,6 @@ class Piece:
         self.row = row
         self.col = col
         self.king = False
-
-        #Se a peça é azul marinho, ela se move para baixo; se for branca, para cima
-        if self.color == AZUL_MARINHO:
-            self.direction = 1
-        else:
-            self.direction = -1
-
         self.x = 0
         self.y = 0
         self.calc_pos()
