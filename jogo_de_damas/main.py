@@ -1,5 +1,8 @@
+# Agradecimento ao TechWithTim que serviu como base para a criação desse projeto
+# Demais créditos estão no README.md
+
 import pygame
-from checkers.constants import *
+from checkers.constants import * 
 from checkers.board import Board
 from checkers.game import Game
 
@@ -31,7 +34,8 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
                 row, col = get_row_and_column_from_mpos(pos)
-                piece = board.get_piece(row, col)
+                game.select(row, col)
+                
         game.update()
     pygame.quit()
 
