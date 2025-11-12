@@ -66,13 +66,13 @@ class Board:
         elif self.white_left <= 0:
             return AZUL_MARINHO
         return None
-                    
-    def get_valid_moves(self, piece):
+
+    def get_valid_moves(self, piece, check_captures=True):
         moves = {}
         left = piece.col - 1
         right = piece.col + 1
         row = piece.row
-        
+
         if piece.king:
             moves.update(self.king_traverse_left(row -1, -1, -1, piece.color, left))
             moves.update(self.king_traverse_right(row -1, -1, -1, piece.color, right))
@@ -84,6 +84,11 @@ class Board:
         if piece.color == AZUL_MARINHO:
             moves.update(self._traverse_left(row +1, min(row+3, ROWS), 1, piece.color, left))
             moves.update(self._traverse_right(row +1, min(row+3, ROWS), 1, piece.color, right))
+        
+        if check_captures:
+            possible_captures = self.check_possible_capture(piece.color)    
+            if possible_captures:
+                moves = {move: skipped for move, skipped in moves.items() if skipped}
         
         return moves
         
@@ -213,4 +218,12 @@ class Board:
             right += 1
         return moves
     
-    
+    def check_possible_capture(self, color):
+        for row in self.board:
+            for piece in row:
+                if piece != 0 and piece.color == color:
+                    valid_moves = self.get_valid_moves(piece, check_captures=False)
+                    for move, skipped in valid_moves.items():
+                        if skipped:
+                            return True
+        return False
