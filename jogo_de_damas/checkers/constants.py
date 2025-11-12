@@ -19,4 +19,4 @@ LIGHT_YELLOW = (255, 255, 224)
 # Cores para destaque
 GREEN_HIGHLIGHT = (144, 238, 144)
 
-CROWN = pygame.transform.scale(pygame.image.load('assets/crown.png'), (44, 25))
+CROWN = pygame.transform.scale(pygame.image.load('jogo_de_damas/assets/crown.png'), (44, 25))
