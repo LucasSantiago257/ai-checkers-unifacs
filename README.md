@@ -85,3 +85,7 @@ JOÃO VICTOR MORAES LEITE
 JORGE HENRIQUE RAMOS GANDOLFI
 VICTOR OLIVEIRA CERQUEIRA
 ```
+---
+## 🔍 Referências
+O código de jogo foi parcialmente inspirado no código do TechWithTim (https://www.youtube.com/watch?v=vnd3RfeG3NM).
+
