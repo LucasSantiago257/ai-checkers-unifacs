@@ -108,6 +108,15 @@ class Board:
                     return True
         return False
     
+    def get_pieces(self, color):
+        pieces = []
+        for row in self.board:
+            for piece in row:
+                if piece != 0 and piece.color == color: # A representação interna do quadrado vazio é 0
+                    # por isso fazemos essa verificação
+                    pieces.append(piece)
+        return pieces
+    
     
                     
     def winner(self):
