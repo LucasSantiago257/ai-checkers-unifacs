@@ -53,6 +53,12 @@ class Game:
         return True
     
     def draw_valid_moves(self, moves):
+        """ Pinta os movimentos válidos de verde no tabuleiro.
+
+        Args:
+            moves(dict): dicionário com os movimentos válidos do jogador atual.
+        """
+        
         for move in moves:
             row, col = move
             pygame.draw.circle(self.win, GREEN_HIGHLIGHT, (col * SQUARE_SIZE + SQUARE_SIZE // 2, row * SQUARE_SIZE + SQUARE_SIZE // 2), 15)
