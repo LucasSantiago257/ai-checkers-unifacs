@@ -63,3 +63,13 @@ class Game:
             self.turn = WHITE
         else:
             self.turn = AZUL_MARINHO
+            
+    def agent_movement(self, board):
+        """ Diferente de nós, o Agente não vai interagir diretamente com a API do PyGame. Para cada movimento do agente, criaremos outro tabuleiro.
+
+        Args:
+            board (Board): O Tabuleiro atual do jogo.
+        """
+        self.board = board
+        self.change_turn()
+        
