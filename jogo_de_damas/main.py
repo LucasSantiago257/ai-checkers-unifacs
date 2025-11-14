@@ -1,6 +1,8 @@
 # Agradecimento ao TechWithTim que serviu como base para a criação desse projeto
 # Demais créditos estão no README.md
 
+# Esse arquivo lida principalmente com a inicialização do Pygame, o loop principal do jogo e a captura de eventos do usuário.
+
 import pygame
 from checkers.constants import * 
 from checkers.board import Board
@@ -24,9 +26,14 @@ def main():
     run = True
     clock = pygame.time.Clock()
     board = Board()
+    game = Game(WIN)
 
     while run:
         clock.tick(FPS)
+        
+        if game.winner() != None:
+            print(f"{game.winner()} venceu!")
+            run = False
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
