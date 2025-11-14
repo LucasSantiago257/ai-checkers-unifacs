@@ -62,41 +62,41 @@ class Board:
                 else:
                     self.white_left -= 1
     
-def evaluate_board(self):
-    score = 0
-    
-    score += (self.darkblue_left - self.white_left) * 10
-    
-    score += (self.darkblue_kings - self.white_kings) * 15
-    
-    for row in range(ROWS):
-        for col in range(COLS):
-            piece = self.board[row][col]
-            if piece != 0:
-                position_value = 0
-                
-                # Peças no centro valem mais
-                if 2 <= row <= 5 and 2 <= col <= 5:
-                    position_value += 3
-                
-                # Peças avançadas valem mais
-                if piece.color == AZUL_MARINHO:
-                    position_value += row 
-                else:
-                    position_value += (ROWS - 1 - row)  # 
+    def evaluate_board(self):
+        score = 0
+        
+        score += (self.darkblue_left - self.white_left) * 10
+        
+        score += (self.darkblue_kings - self.white_kings) * 15
+        
+        for row in range(ROWS):
+            for col in range(COLS):
+                piece = self.board[row][col]
+                if piece != 0:
+                    position_value = 0
+                    
+                    # Peças no centro valem mais
+                    if 2 <= row <= 5 and 2 <= col <= 5:
+                        position_value += 3
+                    
+                    # Peças avançadas valem mais
+                    if piece.color == AZUL_MARINHO:
+                        position_value += row 
+                    else:
+                        position_value += (ROWS - 1 - row)  # 
 
-                if col == 0 or col == COLS - 1:
-                    position_value -= 2
-                
+                    if col == 0 or col == COLS - 1:
+                        position_value -= 2
+                    
 
-                if self._is_protected(piece, row, col):
-                    position_value += 2
-                
-                if piece.color == AZUL_MARINHO:
-                    score += position_value
-                else:
-                    score -= position_value
-        return score
+                    if self._is_protected(piece, row, col):
+                        position_value += 2
+                    
+                    if piece.color == AZUL_MARINHO:
+                        score += position_value
+                    else:
+                        score -= position_value
+            return score
     
     def _is_protected(self, piece, row, col):
         directions = [(-1, -1), (-1, 1), (1, -1), (1, 1)]
@@ -107,6 +107,8 @@ def evaluate_board(self):
                 if neighbor != 0 and neighbor.color == piece.color:
                     return True
         return False
+    
+    
                     
     def winner(self):
         if self.darkblue_left <= 0:
