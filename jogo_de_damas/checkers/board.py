@@ -2,6 +2,8 @@ import pygame
 from .constants import BLACK, ROWS, COLS, PERU, SQUARE_SIZE, AZUL_MARINHO, WHITE
 from .piece import Piece
 
+# Esse arquivo lida com a lógica do tabuleiro de damas, incluindo a criação do tabuleiro, movimentação das peças, remoção de peças capturadas e verificação de movimentos válidos.
+
 class Board:
     def __init__(self):
         self.board = []
