@@ -1,5 +1,7 @@
 import pygame
 
+# Esse arquivo define constantes usadas em todo o jogo de damas, como dimensões da janela, cores e tamanhos das peças.
+
 WIDTH, HEIGHT = 800, 800
 ROWS, COLS = 8, 8
 SQUARE_SIZE = WIDTH // COLS
