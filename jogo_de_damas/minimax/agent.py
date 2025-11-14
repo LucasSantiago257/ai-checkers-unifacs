@@ -9,5 +9,7 @@ def minimax(position, depth, max_player, game):
     
     if max_player:
         max_eval = float('-inf')
+    elif not max_player:
+        min_eval = float('inf')
     
     
