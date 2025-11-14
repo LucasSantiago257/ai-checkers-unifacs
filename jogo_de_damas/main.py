@@ -14,6 +14,14 @@ WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 game = Game(WIN)
 
 def get_row_and_column_from_mpos(pos):
+        """Return the board coordinates that correspond to the mouse position.
+
+        Args:
+            pos (tuple[int, int]): Mouse coordinates in pixels.
+
+        Returns:
+            tuple[int, int]: Row and column indexes.
+        """
         x, y = pos
         row = y // SQUARE_SIZE
         col = x // SQUARE_SIZE
@@ -23,6 +31,14 @@ def get_row_and_column_from_mpos(pos):
 pygame.display.set_caption('Jogo de Damas')
 
 def main():
+    """Initialize pygame and run the event loop until the window is closed.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     run = True
     clock = pygame.time.Clock()
     board = Board()
