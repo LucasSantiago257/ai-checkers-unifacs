@@ -98,7 +98,15 @@ def evaluate_board(self):
                     score -= position_value
         return score
     
-
+    def _is_protected(self, piece, row, col):
+        directions = [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+        for dr, dc in directions:
+            r, c = row + dr, col + dc
+            if 0 <= r < ROWS and 0 <= c < COLS:
+                neighbor = self.board[r][c]
+                if neighbor != 0 and neighbor.color == piece.color:
+                    return True
+        return False
                     
     def winner(self):
         if self.darkblue_left <= 0:
