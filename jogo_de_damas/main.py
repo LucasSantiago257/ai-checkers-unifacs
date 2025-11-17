@@ -7,11 +7,15 @@ import pygame
 from checkers.constants import * 
 from checkers.board import Board
 from checkers.game import Game
+from minimax.agent import minimax
 
 
 FPS = 60
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 game = Game(WIN)
+AI_COLOR = AZUL_MARINHO
+AI_MAX_PLAYER = AI_COLOR == AZUL_MARINHO
+AI_DEPTH = 3
 
 def get_row_and_column_from_mpos(pos):
         """Return the board coordinates that correspond to the mouse position.
@@ -46,6 +50,9 @@ def main():
 
     while run:
         clock.tick(FPS)
+        if game.turn == AI_COLOR and game.winner() is None:
+            _, new_board = minimax(game.board, AI_DEPTH, AI_MAX_PLAYER, game)
+            game.agent_movement(new_board)
         
         if game.winner() != None:
             print(f"{game.winner()} venceu!")
