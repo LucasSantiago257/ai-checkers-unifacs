@@ -42,7 +42,7 @@ class Game:
         """
         self.selected = None
         self.board = Board()
-        self.turn = AZUL_MARINHO
+        self.turn = WHITE
         self.valid_moves = {}
         
     def winner(self):
