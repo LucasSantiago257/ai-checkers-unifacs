@@ -39,7 +39,17 @@ def minimax(position, depth, max_player, game):
 
 
 def simulate_move(piece, move, board, skipped):
-    """Apply ``move`` to ``piece`` on ``board`` and remove any ``skipped`` pieces."""
+    """Apply ``move`` to ``piece`` on ``board`` and remove any ``skipped`` pieces.
+
+    Args:
+        piece (Piece): Piece to move on the board.
+        move (tuple[int, int]): Target row and column for the move.
+        board (Board): Board to apply the move on (modified in place).
+        skipped (list[Piece]): Captured pieces to remove, if any.
+
+    Returns:
+        Board: The board instance after the simulated move.
+    """
     board.move(piece, move[0], move[1])
     if skipped:
         board.remove(skipped)
@@ -47,7 +57,16 @@ def simulate_move(piece, move, board, skipped):
 
 
 def get_all_moves(board, color, game):
-    """Return every board state reachable by a single move from ``color``."""
+    """Return every board state reachable by a single move from ``color``.
+
+    Args:
+        board (Board): Current board state to explore from.
+        color (tuple[int, int, int]): RGB color that identifies the moving side.
+        game (Game): Game instance, currently unused but kept for compatibility.
+
+    Returns:
+        list[Board]: All boards generated after every legal move.
+    """
     moves = []
     for piece in board.get_pieces(color):
         valid_moves = board.get_valid_moves(piece)
