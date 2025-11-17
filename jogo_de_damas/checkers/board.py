@@ -123,7 +123,7 @@ class Board:
                 else:
                     self.white_left -= 1
     
-    def evaluate_board(self):
+    def evaluate(self):
         """Return a heuristic score from the dark blue point of view.
 
         Args:
@@ -165,7 +165,7 @@ class Board:
                         score += position_value
                     else:
                         score -= position_value
-            return score
+        return score
     
     def _is_protected(self, piece, row, col):
         """Return ``True`` if ``piece`` has a friendly neighbor diagonally adjacent.
