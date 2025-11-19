@@ -39,9 +39,7 @@ A Busca MiniMax é um algoritmo de decisão muito usado para jogos de dois jogad
 
 ## Resultado
 
-```
-Resultado ainda pendente de testes e término da lógica do jogo e agente.
-```
+Em uma amostragem de cerca de 30 partidas, a IA consistentemente venceu 90% das partidas jogadas. Tendo um pouco mais de dificuldade quando o jogador consegue fazer uma Dama.
 
 ---
 
